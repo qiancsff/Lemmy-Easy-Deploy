@@ -1568,7 +1568,8 @@ if [[ -z "${COMPOSE_LEMMY_IMAGE}" ]]; then
 	echo
 fi
 
-LEMMY_UI_IMAGE_TAG="ghcr.io/ubergeek77/lemmy-ui:${LATEST_FRONTEND:?}"
+#LEMMY_UI_IMAGE_TAG="ghcr.io/ubergeek77/lemmy-ui:${LATEST_FRONTEND:?}"
+ LEMMY_UI_IMAGE_TAG="qiancsf/lemmy-ui:${LATEST_FRONTEND:?}"
 if [[ -z "${COMPOSE_LEMMY_UI_IMAGE}" ]]; then
 	echo "Finding the best available Frontend image, please wait..."
 	if ! check_image_arch ${LEMMY_UI_IMAGE_TAG:?}; then
